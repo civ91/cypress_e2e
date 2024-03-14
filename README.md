@@ -1,2 +1,3 @@
-# e2e_cypress
-e2e automation framework
+# Pruebas automatizadas E2E con Cypress
+INSTALAR:
+    nodejs version lts

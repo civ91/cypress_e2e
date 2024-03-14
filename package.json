@@ -1,0 +1,28 @@
+{
+  "name": "e2e_cypress",
+  "version": "1.0.0",
+  "description": "INSTALAR:     nodejs version lts",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/civ91/e2e_cypress.git"
+  },
+  "keywords": [
+    "cypress",
+    "testing",
+    "javascript",
+    "typescript"
+  ],
+  "author": "carlos izquierdo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/civ91/e2e_cypress/issues"
+  },
+  "homepage": "https://github.com/civ91/e2e_cypress#readme",
+  "devDependencies": {
+    "cypress": "^13.7.0"
+  }
+}
