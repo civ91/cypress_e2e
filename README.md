@@ -46,3 +46,27 @@ cy.get('h1.welcome-message').should('be.visible').and('have.text', 'Bienvenido a
 
 // Verifica que el checkbox esté marcado
 cy.get('input[type="checkbox"]').should('be.checked');
+```
+
+## Ejemplos de uso de los localizadores
+
+```javascript
+
+  //localizar por tagname
+    cy.get('textarea')
+
+  //localizar por id
+    cy.get('#APjFqb')
+
+  //localizar por clase (class)
+    cy.get('.gLFyf')
+  
+  //localizar por atributo(atribute)
+    cy.get('[maxlength]')
+
+  //localizar por atributo y su valor  
+  cy.get('[maxlength="2048"]')
+
+  //combinar localizadores
+  cy.get('textarea[maxlength="2048"].gLFyf')
+  ```
