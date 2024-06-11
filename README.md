@@ -69,6 +69,7 @@ cy.get('input[type="checkbox"]').should('be.checked');
 
   //combinar localizadores
   cy.get('textarea[maxlength="2048"].gLFyf')
+<<<<<<< HEAD
   ```
 ## Ejemplos de uso para encontrar web elements
 
@@ -210,3 +211,4 @@ cy.contains('Enviar').click(); // Selecciona el botón que contiene el texto 'En
 
 Ambos comandos son esenciales en Cypress y pueden ser combinados para realizar selecciones complejas y precisas en tus pruebas automatizadas.
 ```
+
