@@ -211,4 +211,4 @@ cy.contains('Enviar').click(); // Selecciona el botón que contiene el texto 'En
 
 Ambos comandos son esenciales en Cypress y pueden ser combinados para realizar selecciones complejas y precisas en tus pruebas automatizadas.
 ```
-
+>>>>>>>>> Temporary merge branch 2
