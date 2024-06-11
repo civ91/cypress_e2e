@@ -70,3 +70,143 @@ cy.get('input[type="checkbox"]').should('be.checked');
   //combinar localizadores
   cy.get('textarea[maxlength="2048"].gLFyf')
   ```
+## Ejemplos de uso para encontrar web elements
+
+
+  ```javascript
+
+  ¡Por supuesto! Aquí tienes un documento en formato Markdown que explica la diferencia entre `contains` y `get` en Cypress, junto con varios ejemplos.
+
+```markdown
+# Diferencia entre `contains` y `get` en Cypress
+
+En Cypress, los comandos `contains` y `get` se utilizan para seleccionar elementos en la página web, pero tienen diferencias importantes en su funcionalidad y uso.
+
+## `cy.get()`
+
+El comando `cy.get()` se utiliza para seleccionar uno o más elementos del DOM basándose en un selector CSS. Este método es muy versátil y puede seleccionar elementos por ID, clase, etiqueta, atributo, etc.
+
+### Ejemplos
+
+#### Selección por ID
+
+```html
+<!-- HTML -->
+<button id="submit-button">Enviar</button>
+```
+
+```javascript
+// Cypress
+cy.get('#submit-button');
+```
+
+#### Selección por Clase
+
+```html
+<!-- HTML -->
+<button class="btn-primary">Enviar</button>
+```
+
+```javascript
+// Cypress
+cy.get('.btn-primary');
+```
+
+#### Selección por Atributo
+
+```html
+<!-- HTML -->
+<input type="email" name="email" placeholder="Correo electrónico">
+```
+
+```javascript
+// Cypress
+cy.get('input[type="email"]');
+```
+
+## `cy.contains()`
+
+El comando `cy.contains()` se utiliza para seleccionar un elemento que contiene texto específico. Este método busca el texto dentro de los elementos y selecciona el primer elemento que coincide con el texto dado.
+
+### Ejemplos
+
+#### Selección por Texto Exacto
+
+```html
+<!-- HTML -->
+<button>Enviar</button>
+```
+
+```javascript
+// Cypress
+cy.contains('Enviar');
+```
+
+#### Selección de un Elemento Conteniendo Texto
+
+```html
+<!-- HTML -->
+<div class="notification">
+  <p>¡Bienvenido a nuestra aplicación!</p>
+</div>
+```
+
+```javascript
+// Cypress
+cy.contains('¡Bienvenido a nuestra aplicación!');
+```
+
+## Comparación de Uso
+
+### `cy.get()` vs `cy.contains()`
+
+- **`cy.get()`**: Utilizado para seleccionar elementos basados en selectores CSS.
+- **`cy.contains()`**: Utilizado para seleccionar elementos que contienen texto específico.
+
+### Ejemplo Comparativo
+
+#### Usando `cy.get()`
+
+```html
+<!-- HTML -->
+<button class="btn-primary">Enviar</button>
+<button class="btn-secondary">Cancelar</button>
+```
+
+```javascript
+// Cypress
+cy.get('.btn-primary').click(); // Selecciona el botón con la clase 'btn-primary'
+```
+
+#### Usando `cy.contains()`
+
+```html
+<!-- HTML -->
+<button class="btn-primary">Enviar</button>
+<button class="btn-secondary">Cancelar</button>
+```
+
+```javascript
+// Cypress
+cy.contains('Enviar').click(); // Selecciona el botón que contiene el texto 'Enviar'
+```
+
+### Ventajas y Desventajas
+
+#### `cy.get()`
+
+- **Ventajas**: Más flexible y puede seleccionar elementos sin importar el texto que contienen.
+- **Desventajas**: Requiere conocer el selector CSS exacto.
+
+#### `cy.contains()`
+
+- **Ventajas**: Muy útil para seleccionar elementos cuando el texto es conocido pero el selector CSS no.
+- **Desventajas**: No puede seleccionar elementos que no contienen texto visible o cuando hay múltiples elementos con el mismo texto.
+
+## Resumen
+
+- **Usa `cy.get()`** cuando necesitas seleccionar elementos basados en su estructura HTML y atributos.
+- **Usa `cy.contains()`** cuando necesitas seleccionar elementos basados en el texto que contienen.
+
+Ambos comandos son esenciales en Cypress y pueden ser combinados para realizar selecciones complejas y precisas en tus pruebas automatizadas.
+```
